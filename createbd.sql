@@ -10,6 +10,11 @@ GRANT ALL PRIVILEGES ON warehouse_accounting_db TO admin;
 
 SET ROLE admin;
 
+CREATE TABLE IF NOT EXISTS register_place(
+  place_id INTEGER NOT NULL PRIMARY KEY,
+  storage_location VARCHAR(255) NOT NULL,
+  free VARCHAR(3) NOT NULL CHECK (free IN ('да', 'нет'))
+);
 
 CREATE TABLE IF NOT EXISTS product(
   product_id SERIAL NOT NULL PRIMARY KEY,
@@ -19,7 +24,7 @@ CREATE TABLE IF NOT EXISTS product(
   measure VARCHAR(255) NOT NULL CHECK (measure IN ('штук', 'кг')),
   expiration_date_from timestamp NOT NULL,
   expiration_date_to timestamp NOT NULL,
-  storage_location VARCHAR(255) NOT NULL
+  place_id INTEGER NOT NULL REFERENCES register_place ON DELETE CASCADE
 );
 
 
