@@ -58,3 +58,23 @@ INSERT INTO deliveries (product_id, client_id, date_issue, count, status) VALUES
 (5, 4, '2022-07-20 17:10:00', 9, 'в процессе'),
 (6, 5, '2022-08-16 11:00:00', 2, 'в процессе'),
 (4, 6, '2022-09-25 12:20:00', 1, 'в процессе')
+
+INSERT INTO deliveries_list (deliveries_list_id, product_id, delivery_id, quantity) VALUES
+(1, 1, 1, 4),
+(2, 1, 2, 6),
+(3, 2, 3, 4),
+(4, 3, 4, 5),
+(5, 3, 4, 6),
+(6, 4, 5, 10),
+(7, 5, 6, 20),
+(8, 6, 7, 15)
+
+INSERT INTO supplies_list (supplies_list_id, product_id, supply_id, quantity) VALUES
+(1, 1, 2, 3),
+(2, 1, 1, 5),
+(3, 2, 3, 1),
+(4, 3, 5, 9),
+(5, 3, 4, 7),
+(6, 4, 5, 6),
+(7, 5, 6, 5),
+(8, 6, 7, 1)
