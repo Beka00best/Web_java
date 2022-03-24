@@ -1,9 +1,8 @@
+CREATE USER admin WITH ENCRYPTED PASSWORD '1970';
 DROP OWNED BY admin;
-DROP USER IF EXISTS admin;
 DROP DATABASE IF EXISTS warehouse_accounting_db;
 
 CREATE DATABASE warehouse_accounting_db;
-CREATE USER admin WITH WITH ENCRYPTED PASSWORD '1970';
 GRANT ALL PRIVILEGES ON warehouse_accounting_db TO admin;
 
 \connect warehouse_accounting_db
@@ -16,7 +15,7 @@ CREATE TABLE IF NOT EXISTS register_place(
   free VARCHAR(3) NOT NULL CHECK (free IN ('да', 'нет'))
 );
 
-CREATE TABLE IF NOT EXISTS product(
+CREATE TABLE IF NOT EXISTS products(
   product_id SERIAL NOT NULL PRIMARY KEY,
   product_name VARCHAR(255) NOT NULL,
   type VARCHAR(255) NOT NULL,
@@ -28,7 +27,7 @@ CREATE TABLE IF NOT EXISTS product(
 );
 
 
-CREATE TABLE IF NOT EXISTS client(
+CREATE TABLE IF NOT EXISTS clients(
   client_id SERIAL NOT NULL PRIMARY KEY,
   client_name VARCHAR(255) NOT NULL,
   contact VARCHAR(50) NOT NULL,
@@ -48,10 +47,8 @@ CREATE TABLE IF NOT EXISTS suppliers(
 
 CREATE TABLE IF NOT EXISTS supplies(
   supply_id SERIAL NOT NULL PRIMARY KEY,
-  product_id INTEGER NOT NULL REFERENCES product ON DELETE CASCADE,
   supplier_id INTEGER NOT NULL REFERENCES suppliers ON DELETE CASCADE,
   data_supply timestamp NOT NULL,
-  count INTEGER NOT NULL CHECK (count > 0),
   status VARCHAR(255) NOT NULL,
   store_period INTEGER NOT NULL CHECK (store_period > 0)
 );
@@ -59,9 +56,21 @@ CREATE TABLE IF NOT EXISTS supplies(
 
 CREATE TABLE IF NOT EXISTS deliveries(
   delivery_id SERIAL NOT NULL PRIMARY KEY,
-  product_id INTEGER NOT NULL REFERENCES product ON DELETE CASCADE,
-  client_id INTEGER NOT NULL REFERENCES client ON DELETE CASCADE,
+  client_id INTEGER NOT NULL REFERENCES clients ON DELETE CASCADE,
   date_issue timestamp NOT NULL,
-  count INTEGER NOT NULL CHECK (count > 0),
   status VARCHAR(255) NOT NULL CHECK (status IN ('в процессе', 'завершен'))
+);
+
+CREATE TABLE IF NOT EXISTS deliveries_list(
+  deliveries_list_id SERIAL NOT NULL PRIMARY KEY,
+  product_id INTEGER NOT NULL REFERENCES products ON DELETE CASCADE,
+  delivery_id INTEGER NOT NULL REFERENCES deliveries ON DELETE CASCADE,
+  quantity INTEGER NOT NULL CHECK (quantity > 0)
+);
+
+CREATE TABLE IF NOT EXISTS supplies_list(
+  supplies_list_id SERIAL NOT NULL PRIMARY KEY,
+  product_id INTEGER NOT NULL REFERENCES products ON DELETE CASCADE,
+  supply_id INTEGER NOT NULL REFERENCES supplies ON DELETE CASCADE,
+  quantity INTEGER NOT NULL CHECK (quantity > 0)
 );
