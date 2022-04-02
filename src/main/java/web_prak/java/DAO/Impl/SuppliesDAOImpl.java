@@ -50,7 +50,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesBySupplier(long supplier_id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("SELECT d FROM supplies d JOIN d.supplier_id s " +
+        Query<Supplies> query = session.createQuery("SELECT d FROM Supplies d JOIN d.supplier_id s " +
                         "WHERE s.supplier_id = :param", Supplies.class).setParameter("param", supplier_id);
         List<Supplies> supplies = query.getResultList();
         session.close();
@@ -63,7 +63,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesDate(Date data_supply) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("FROM supplies WHERE data_supply = :param",
+        Query<Supplies> query = session.createQuery("FROM Supplies WHERE data_supply = :param",
                 Supplies.class).setParameter("param", data_supply);
         List<Supplies> supplies = query.getResultList();
         session.close();
@@ -76,7 +76,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesDateAfter(Date data_supply) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("FROM supplies WHERE data_supply <= :param",
+        Query<Supplies> query = session.createQuery("FROM Supplies WHERE data_supply <= :param",
                         Supplies.class).setParameter("param", data_supply);
         List<Supplies> supplies = query.getResultList();
         session.close();
@@ -89,7 +89,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesDateBefore(Date data_supply) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("FROM supplies WHERE data_supply >= :param",
+        Query<Supplies> query = session.createQuery("FROM Supplies WHERE data_supply >= :param",
                 Supplies.class).setParameter("param", data_supply);
         List<Supplies> supplies = query.getResultList();
         session.close();
@@ -102,7 +102,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesByStatus(String status) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("FROM supplies WHERE status = :param",
+        Query<Supplies> query = session.createQuery("FROM Supplies WHERE status = :param",
                 Supplies.class).setParameter("param", status);
         List<Supplies> supplies = query.getResultList();
         session.close();
@@ -115,7 +115,7 @@ public class SuppliesDAOImpl implements SuppliesDAO {
     @Override
     public List<Supplies> getSuppliesByStorePeriod(int store_period) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Supplies> query = session.createQuery("FROM supplies WHERE store_period = :param",
+        Query<Supplies> query = session.createQuery("FROM Supplies WHERE store_period = :param",
                 Supplies.class).setParameter("param", store_period);
         List<Supplies> supplies = query.getResultList();
         session.close();

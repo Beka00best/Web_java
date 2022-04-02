@@ -28,7 +28,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="64aa2b12-5556-4c50-8611-df95f6143a30">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[CREATE DATABASE warehouse_accounting_db;]]></console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select *From clients;
+alter table register_place alter column place_id type SERIAL;
+delete from suppliers;
+commit;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -36,6 +39,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="64aa2b12-5556-4c50-8611-df95f6143a30" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="64aa2b12-5556-4c50-8611-df95f6143a30" dataset="public.clients" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

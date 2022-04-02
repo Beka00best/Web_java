@@ -49,8 +49,8 @@ public class Deliveries_listDAOImpl implements Deliveries_listDAO {
     @Override
     public List<Deliveries_list> getDeliveriesListByDelivery(long delivery_id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries_list> query = session.createQuery("SELECT d FROM deliveries_list d JOIN " +
-                        "dl.delivery_id s WHERE s.delivery_id = :param", Deliveries_list.class)
+        Query<Deliveries_list> query = session.createQuery("SELECT d FROM Deliveries_list d JOIN " +
+                        "d.delivery_id s WHERE s.delivery_id = :param", Deliveries_list.class)
                 .setParameter("param", delivery_id);
         List<Deliveries_list> deliveries_list = query.getResultList();
         session.close();
@@ -63,8 +63,8 @@ public class Deliveries_listDAOImpl implements Deliveries_listDAO {
     @Override
     public List<Deliveries_list> getDeliveriesListByProduct(long product_id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries_list> query = session.createQuery("SELECT d FROM deliveries_list d JOIN " +
-                        "dl.product_id s WHERE s.product_id = :param", Deliveries_list.class)
+        Query<Deliveries_list> query = session.createQuery("SELECT d FROM Deliveries_list d JOIN " +
+                        "d.product_id s WHERE s.product_id = :param", Deliveries_list.class)
                 .setParameter("param", product_id);
         List<Deliveries_list> deliveries_list = query.getResultList();
         session.close();
@@ -77,7 +77,7 @@ public class Deliveries_listDAOImpl implements Deliveries_listDAO {
     @Override
     public List<Deliveries_list> getDeliveriesListByQuantity(int quantity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries_list> query = session.createQuery("FROM deliveries_list WHERE quantity = :param",
+        Query<Deliveries_list> query = session.createQuery("FROM Deliveries_list WHERE quantity = :param",
                 Deliveries_list.class).setParameter("param", quantity);
         List<Deliveries_list> deliveries_list = query.getResultList();
         session.close();
@@ -90,7 +90,7 @@ public class Deliveries_listDAOImpl implements Deliveries_listDAO {
     @Override
     public List<Deliveries_list> getDeliveriesListMoreQuantity(int quantity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries_list> query = session.createQuery("FROM deliveries_list WHERE quantity >= :param",
+        Query<Deliveries_list> query = session.createQuery("FROM Deliveries_list WHERE quantity <= :param",
                 Deliveries_list.class).setParameter("param", quantity);
         List<Deliveries_list> deliveries_list = query.getResultList();
         session.close();
@@ -103,7 +103,7 @@ public class Deliveries_listDAOImpl implements Deliveries_listDAO {
     @Override
     public List<Deliveries_list> getDeliveriesListLessQuantity(int quantity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries_list> query = session.createQuery("FROM deliveries_list WHERE quantity <= :param",
+        Query<Deliveries_list> query = session.createQuery("FROM Deliveries_list WHERE quantity >= :param",
                 Deliveries_list.class).setParameter("param", quantity);
         List<Deliveries_list> deliveries_list = query.getResultList();
         session.close();

@@ -42,7 +42,7 @@ INSERT INTO suppliers (supplier_name, contact, address, email) VALUES
 ('Литвинов Дмитрий', '+7 (926) 716-32-93', 'Кузнеческий проезд, д3', 'amatejic8@reverbnation.com'),
 ('Розанова Алиса', '+7 (926) 177-90-61', 'Черная улица, д13', 'ehuson9@weather.com')
 
-INSERT INTO supplies (product_id, supplier_id, data_supply, count, status, store_period) VALUES
+INSERT INTO supplies (product_id, supplier_id, data_supply, "count"******, status, store_period) VALUES
 (1, 1, '2022-01-05 10:40:00', 5, 'в процессе', 120),
 (3, 2, '2022-02-03 19:50:00', 5, 'в процессе', 100),
 (2, 3, '2022-02-26 13:20:00', 5, 'в процессе', 60),
@@ -51,7 +51,7 @@ INSERT INTO supplies (product_id, supplier_id, data_supply, count, status, store
 (4, 6, '2022-05-25 12:20:00', 5, 'в процессе', 120)
 
 
-INSERT INTO deliveries (product_id, client_id, date_issue, count, status) VALUES
+INSERT INTO deliveries (product_id, client_id, date_issue, count*********, status) VALUES
 (1, 1, '2022-02-05 10:40:00', 6, 'завершен'),
 (3, 2, '2022-01-03 19:50:00', 5, 'завершен'),
 (2, 3, '2022-06-26 13:20:00', 4, 'в процессе'),

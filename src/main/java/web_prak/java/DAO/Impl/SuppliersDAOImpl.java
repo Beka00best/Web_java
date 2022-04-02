@@ -49,8 +49,8 @@ public class SuppliersDAOImpl implements SuppliersDAO {
     @Override
     public List<Suppliers> getSuppliersByName(String supplier_name) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Suppliers> query = session.createQuery("From suppliers Where supplier_name LIKE :gotName",
-                Suppliers.class).setParameter("gotName", "%" + supplier_name + "%");
+        Query<Suppliers> query = session.createQuery("From Suppliers Where supplier_name =: param",
+                Suppliers.class).setParameter("param", supplier_name);
         List<Suppliers> suppliers = query.getResultList();
         session.close();
         if (suppliers.size() == 0) {

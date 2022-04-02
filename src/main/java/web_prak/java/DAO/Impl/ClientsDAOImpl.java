@@ -41,11 +41,8 @@ public class ClientsDAOImpl implements ClientsDAO {
     @Override
     public List<Clients> getClientByName(String client_name) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Clients> query = session.createQuery("From clients Where client_name LIKE :param",
+        Query<Clients> query = session.createQuery("From Clients Where client_name =: param",
                 Clients.class).setParameter("param", client_name);
-        if (query.getResultList().size() == 0) {
-            return null;
-        }
         return query.getResultList();
     }
 

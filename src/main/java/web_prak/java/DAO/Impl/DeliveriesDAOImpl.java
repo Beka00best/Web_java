@@ -50,7 +50,7 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
     @Override
     public List<Deliveries> getDeliveriesByClient(long client_id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries> query = session.createQuery("SELECT d FROM deliveries d JOIN d.client_id s " +
+        Query<Deliveries> query = session.createQuery("SELECT d FROM Deliveries d JOIN d.client_id s " +
                 "WHERE s.client_id = :param", Deliveries.class).setParameter("param", client_id);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
@@ -63,7 +63,7 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
     @Override
     public List<Deliveries> getDeliveriesDate(Date data_issue) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries> query = session.createQuery("FROM deliveries WHERE data_issue = :param",
+        Query<Deliveries> query = session.createQuery("FROM Deliveries WHERE date_issue = :param",
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
@@ -76,7 +76,7 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
     @Override
     public List<Deliveries> getDeliveriesDateAfter(Date data_issue) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries> query = session.createQuery("FROM deliveries WHERE data_issue <= :param",
+        Query<Deliveries> query = session.createQuery("FROM Deliveries WHERE date_issue <= :param",
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
@@ -89,7 +89,7 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
     @Override
     public List<Deliveries> getDeliveriesDateBefore(Date data_issue) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries> query = session.createQuery("FROM deliveries WHERE data_issue >= :param",
+        Query<Deliveries> query = session.createQuery("FROM Deliveries WHERE date_issue >= :param",
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
@@ -102,7 +102,7 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
     @Override
     public List<Deliveries> getDeliveriesByStatus(String status) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Deliveries> query = session.createQuery("FROM deliveries WHERE status = :param",
+        Query<Deliveries> query = session.createQuery("FROM Deliveries WHERE status = :param",
                         Deliveries.class).setParameter("param", status);
         List<Deliveries> deliveries = query.getResultList();
         session.close();

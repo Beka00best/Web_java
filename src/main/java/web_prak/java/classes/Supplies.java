@@ -13,6 +13,7 @@ import java.util.Objects;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 
 public class Supplies {
 
@@ -21,8 +22,9 @@ public class Supplies {
     @Column(nullable = false, name = "supply_id")
     private long supply_id;
 
-    @ManyToOne(targetEntity = Suppliers.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "supplier_id")
+    @NonNull
     private Suppliers supplier_id;
 
     @Column(nullable = false, name = "data_supply")

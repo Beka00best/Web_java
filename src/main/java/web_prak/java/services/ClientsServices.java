@@ -29,4 +29,8 @@ public class ClientsServices {
         return clientsDAO.getClientsAll();
     }
 
+    public List<Clients> getClientByName(String client_name) {
+        return clientsDAO.getClientByName(client_name);
+    }
+
 }

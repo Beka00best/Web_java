@@ -13,6 +13,7 @@ import java.util.Objects;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 
 public class Deliveries {
 
@@ -21,13 +22,13 @@ public class Deliveries {
     @Column(nullable = false, name = "delivery_id")
     private long delivery_id;
 
-    @ManyToOne(targetEntity = Clients.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "client_id")
     private Clients client_id;
 
-    @Column(nullable = false, name = "data_issue")
+    @Column(nullable = false, name = "date_issue")
     @NonNull
-    private Date data_issue;
+    private Date date_issue;
 
     @Column(nullable = false, name = "status")
     @NonNull
@@ -40,12 +41,12 @@ public class Deliveries {
         Deliveries deliveries = (Deliveries) o;
         return Objects.equals(delivery_id, deliveries.delivery_id)
                 && client_id.equals(deliveries.client_id)
-                && data_issue.equals(deliveries.data_issue)
+                && date_issue.equals(deliveries.date_issue)
                 && status.equals(deliveries.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(delivery_id, client_id, data_issue, status);
+        return Objects.hash(delivery_id, client_id, date_issue, status);
     }
 }

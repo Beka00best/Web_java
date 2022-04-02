@@ -10,7 +10,7 @@ GRANT ALL PRIVILEGES ON warehouse_accounting_db TO admin;
 SET ROLE admin;
 
 CREATE TABLE IF NOT EXISTS register_place(
-  place_id INTEGER NOT NULL PRIMARY KEY,
+  place_id SERIAL NOT NULL PRIMARY KEY,
   storage_location VARCHAR(255) NOT NULL,
   free VARCHAR(3) NOT NULL CHECK (free IN ('да', 'нет'))
 );

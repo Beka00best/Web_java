@@ -11,7 +11,7 @@ public interface Supplies_listDAO {
 
     Supplies_list getSuppliesListById(long supplies_list_id);
     List<Supplies_list> getSuppliesListByProduct(long product_id);
-    List<Supplies_list> getSuppliesListByDelivery(long delivery_id);
+    List<Supplies_list> getSuppliesListBySupplies(long supply_id);
     List<Supplies_list> getSuppliesListByQuantity(int quantity);
     List<Supplies_list> getSuppliesListMoreQuantity(int quantity);
     List<Supplies_list> getSuppliesListLessQuantity(int quantity);

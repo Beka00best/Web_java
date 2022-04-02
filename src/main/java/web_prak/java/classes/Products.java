@@ -14,6 +14,7 @@ import java.util.Objects;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 
 public class Products {
 
@@ -45,8 +46,9 @@ public class Products {
     @NonNull
     private Date expiration_date_to;
 
-    @ManyToOne(targetEntity = Register_place.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "place_id")
+    @NonNull
     private Register_place place_id;
 
     @Override

@@ -51,7 +51,7 @@ public class ProductsDAOImpl implements ProductsDAO {
     @Override
     public List<Products> getProductByProductName(String product_name) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("FROM products WHERE product_name LIKE = :param",
+        Query<Products> query = session.createQuery("FROM Products WHERE product_name = :param",
                         Products.class).setParameter("param", product_name);
         List<Products> products = query.getResultList();
         session.close();
@@ -64,7 +64,7 @@ public class ProductsDAOImpl implements ProductsDAO {
     @Override
     public List<Products> getProductType(String type) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("FROM products WHERE type = :param", Products.class)
+        Query<Products> query = session.createQuery("FROM Products WHERE type = :param", Products.class)
                 .setParameter("param", type);
         List<Products> products = query.getResultList();
         session.close();
@@ -75,10 +75,10 @@ public class ProductsDAOImpl implements ProductsDAO {
     }
 
     @Override
-    public List<Products> getProductByDate(Date date) {
+    public List<Products> getProductByExpirationDateFrom(Date date) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("FROM products WHERE date = :param", Products.class)
-                .setParameter("param", date);
+        Query<Products> query = session.createQuery("FROM Products WHERE expiration_date_from = :param",
+                        Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
         if (products.size() == 0) {
@@ -90,7 +90,7 @@ public class ProductsDAOImpl implements ProductsDAO {
     @Override
     public List<Products> getProductBySupplier(Suppliers supplier) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("SELECT p FROM products p WHERE p.supplier_id = :param",
+        Query<Products> query = session.createQuery("SELECT p FROM Products p WHERE p.supplier_id = :param",
                         Products.class).setParameter("param", supplier);
         List<Products> products = query.getResultList();
         session.close();
@@ -101,10 +101,10 @@ public class ProductsDAOImpl implements ProductsDAO {
     }
 
     @Override
-    public List<Products> getProductByDateBefore(Date date) {
+    public List<Products> getProductByExpirationDateFromBefore(Date date) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("FROM products WHERE date <= :param", Products.class)
-                .setParameter("param", date);
+        Query<Products> query = session.createQuery("FROM Products WHERE expiration_date_from <= :param",
+                        Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
         if (products.size() == 0) {
@@ -114,10 +114,23 @@ public class ProductsDAOImpl implements ProductsDAO {
     }
 
     @Override
-    public List<Products> getProductByDateAfter(Date date) {
+    public List<Products> getProductByExpirationDateFromAfter(Date date) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("FROM products WHERE date >= :param", Products.class)
-                .setParameter("param", date);
+        Query<Products> query = session.createQuery("FROM Products WHERE expiration_date_from >= :param",
+                        Products.class).setParameter("param", date);
+        List<Products> products = query.getResultList();
+        session.close();
+        if (products.size() == 0) {
+            return null;
+        }
+        return products;
+    }
+
+    @Override
+    public List<Products> getProductByExpirationDateTo(Date date) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query<Products> query = session.createQuery("FROM Products WHERE expiration_date_to = :param",
+                        Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
         if (products.size() == 0) {

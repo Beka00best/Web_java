@@ -20,11 +20,11 @@ public class Supplies_list {
     @Column(nullable = false, name = "supplies_list_id")
     private long supplies_list_id;
 
-    @ManyToOne(targetEntity = Products.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     private Products product_id;
 
-    @ManyToOne(targetEntity = Supplies.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "supply_id")
     private Supplies supply_id;
 

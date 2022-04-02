@@ -20,11 +20,11 @@ public class Deliveries_list {
     @Column(nullable = false, name = "deliveries_list_id")
     private long deliveries_list_id;
 
-    @ManyToOne(targetEntity = Products.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     private Products product_id;
 
-    @ManyToOne(targetEntity = Deliveries.class)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "delivery_id")
     private Deliveries delivery_id;
 
