@@ -5,7 +5,6 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import web_prak.java.DAO.ProductsDAO;
 import web_prak.java.classes.Products;
-import web_prak.java.classes.Suppliers;
 import web_prak.java.utils.HibernateSessionFactoryUtil;
 
 import javax.persistence.criteria.CriteriaQuery;
@@ -55,9 +54,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                         Products.class).setParameter("param", product_name);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 
@@ -68,9 +67,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                 .setParameter("param", type);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 
@@ -81,22 +80,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                         Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
-        return products;
-    }
-
-    @Override
-    public List<Products> getProductBySupplier(Suppliers supplier) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Query<Products> query = session.createQuery("SELECT p FROM Products p WHERE p.supplier_id = :param",
-                        Products.class).setParameter("param", supplier);
-        List<Products> products = query.getResultList();
-        session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 
@@ -107,9 +93,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                         Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 
@@ -120,9 +106,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                         Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 
@@ -133,9 +119,9 @@ public class ProductsDAOImpl implements ProductsDAO {
                         Products.class).setParameter("param", date);
         List<Products> products = query.getResultList();
         session.close();
-        if (products.size() == 0) {
-            return null;
-        }
+//        if (products.size() == 0) {
+//            return null;
+//        }
         return products;
     }
 

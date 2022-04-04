@@ -14,7 +14,6 @@ public interface ProductsDAO {
     List<Products> getProductByProductName(String product_name);
     List<Products> getProductType(String type);
     List<Products> getProductByExpirationDateFrom(Date date);
-    List<Products> getProductBySupplier(Suppliers supplier);
     List<Products> getProductByExpirationDateFromBefore(Date date);
     List<Products> getProductByExpirationDateFromAfter(Date date);
     List<Products> getProductByExpirationDateTo(Date date);

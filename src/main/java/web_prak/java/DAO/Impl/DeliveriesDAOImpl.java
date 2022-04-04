@@ -54,9 +54,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
                 "WHERE s.client_id = :param", Deliveries.class).setParameter("param", client_id);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 
@@ -67,9 +67,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 
@@ -80,9 +80,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 
@@ -93,9 +93,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
                         Deliveries.class).setParameter("param", data_issue);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 
@@ -106,9 +106,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
                         Deliveries.class).setParameter("param", status);
         List<Deliveries> deliveries = query.getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 
@@ -119,9 +119,9 @@ public class DeliveriesDAOImpl implements DeliveriesDAO {
         criteria.from(Deliveries.class);
         List<Deliveries> deliveries = session.createQuery(criteria).getResultList();
         session.close();
-        if (deliveries.size() == 0) {
-            return null;
-        }
+//        if (deliveries.size() == 0) {
+//            return null;
+//        }
         return deliveries;
     }
 }

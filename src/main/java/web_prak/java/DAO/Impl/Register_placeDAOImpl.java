@@ -57,9 +57,9 @@ public class Register_placeDAOImpl implements Register_placeDAO {
                         Register_place.class).setParameter("param", free);
         List<Register_place> register_place = query.getResultList();
         session.close();
-        if (register_place.size() == 0) {
-            return null;
-        }
+//        if (register_place.size() == 0) {
+//            return null;
+//        }
         return register_place;
     }
 
@@ -70,9 +70,9 @@ public class Register_placeDAOImpl implements Register_placeDAO {
                 "WHERE storage_location = :param", Register_place.class).setParameter("param", storage_location);
         List<Register_place> register_place = query.getResultList();
         session.close();
-        if (register_place.size() == 0) {
-            return null;
-        }
+//        if (register_place.size() == 0) {
+//            return null;
+//        }
         return register_place;
     }
 

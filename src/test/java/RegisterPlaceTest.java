@@ -104,4 +104,24 @@ public class RegisterPlaceTest {
         register_placeServices.deleteRegisterPlace(expectedRegPlaces.get(0));
         register_placeServices.deleteRegisterPlace(expectedRegPlaces.get(1));
     }
+
+    @Test
+    public void testGetAllRegPlace() {
+        register_placeServices = new Register_placeServices();
+        List<Register_place> expectedRegPlaces = List.of(
+                new Register_place(1, "02 10 03", "нет"),
+                new Register_place(2, "03 03 04", "нет")
+        );
+        register_placeServices.createRegisterPlace(expectedRegPlaces.get(0));
+        register_placeServices.createRegisterPlace(expectedRegPlaces.get(1));
+
+        List<Register_place> realRegPlace = register_placeServices.getAllRegPlace();
+        assertEquals(expectedRegPlaces, realRegPlace);
+
+        assertTrue(expectedRegPlaces.contains(realRegPlace.get(0)));
+        assertTrue(expectedRegPlaces.contains(realRegPlace.get(1)));
+
+        register_placeServices.deleteRegisterPlace(expectedRegPlaces.get(0));
+        register_placeServices.deleteRegisterPlace(expectedRegPlaces.get(1));
+    }
 }

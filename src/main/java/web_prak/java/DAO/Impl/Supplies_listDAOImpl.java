@@ -54,9 +54,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
                 .setParameter("param", product_id);
         List<Supplies_list> supplies_lists = query.getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 
@@ -68,9 +68,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
                 .setParameter("param", supply_id);
         List<Supplies_list> supplies_lists = query.getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 
@@ -81,9 +81,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
                 Supplies_list.class).setParameter("param", quantity);
         List<Supplies_list> supplies_lists = query.getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 
@@ -94,9 +94,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
                 Supplies_list.class).setParameter("param", quantity);
         List<Supplies_list> supplies_lists = query.getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 
@@ -107,9 +107,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
                 Supplies_list.class).setParameter("param", quantity);
         List<Supplies_list> supplies_lists = query.getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 
@@ -120,9 +120,9 @@ public class Supplies_listDAOImpl implements Supplies_listDAO {
         criteria.from(Supplies_list.class);
         List<Supplies_list> supplies_lists = session.createQuery(criteria).getResultList();
         session.close();
-        if (supplies_lists.size() == 0) {
-            return null;
-        }
+//        if (supplies_lists.size() == 0) {
+//            return null;
+//        }
         return supplies_lists;
     }
 }

@@ -39,10 +39,6 @@ public class ProductsServices {
         return productsDAO.getProductByExpirationDateFrom(date);
     }
 
-    public List<Products> getProductBySupplier(Suppliers supplier) {
-        return productsDAO.getProductBySupplier(supplier);
-    }
-
     public List<Products> getProductByDateBefore(Date date) {
         return productsDAO.getProductByExpirationDateFromBefore(date);
     }

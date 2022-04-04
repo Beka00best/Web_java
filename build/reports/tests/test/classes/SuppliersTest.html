@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class SuppliersTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class SuppliersTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; SuppliersTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.305s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateNewSuppliers</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDeleteSuppliers</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetSuppliersAll</td>
+<td class="success">0.067s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetSuppliersById</td>
+<td class="success">0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetSuppliersByName</td>
+<td class="success">0.067s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateSupplier</td>
+<td class="success">0.050s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:49:37.701 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.701 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.701 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.701 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.703 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 276
+11:49:37.703 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.704 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.704 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.704 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.704 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.704 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.704 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.704 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=276, email=wokker0@infoseek.co.jp}
+11:49:37.716 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.716 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.717 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.719 [Test worker] DEBUG org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#276]
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.720 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#276]
+11:49:37.720 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#276
+11:49:37.720 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.721 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.721 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.722 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.722 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.722 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.722 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.722 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.722 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.722 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=276, email=wokker0@infoseek.co.jp}
+11:49:37.722 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.743 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.743 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.744 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.745 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.745 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.746 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.746 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.747 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 277
+11:49:37.747 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.748 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.748 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.748 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.748 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.748 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.748 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.748 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=277, email=wokker0@infoseek.co.jp}
+11:49:37.760 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.761 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.761 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.763 [Test worker] DEBUG org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#277]
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.764 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#277]
+11:49:37.765 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#277
+11:49:37.765 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.767 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.767 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.768 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.768 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.768 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.768 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.768 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.768 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.768 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=277, email=wokker0@infoseek.co.jp}
+11:49:37.768 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.788 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.788 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.788 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.788 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.789 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#277
+11:49:37.789 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.790 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.790 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.790 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.791 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.791 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 278
+11:49:37.791 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.791 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.791 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.791 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.792 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.792 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.792 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.792 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=278, email=wokker0@infoseek.co.jp}
+11:49:37.804 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.804 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.804 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.804 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.804 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.804 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.805 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 279
+11:49:37.805 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.805 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.805 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.805 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.805 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.805 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.805 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.805 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Арбат, д1, contact=+7 (926) 765-17-17, supplier_name=Казакова Алиса, supplier_id=279, email=pbrew2@booking.com}
+11:49:37.821 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.821 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.821 [Test worker] DEBUG org.hibernate.query.criteria.internal.CriteriaQueryImpl - Rendered criteria query -&gt; select generatedAlias0 from Suppliers as generatedAlias0
+11:49:37.821 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from web_prak.java.classes.Suppliers as generatedAlias0
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'web_prak'
+       |     |  |  |  \-[IDENT] Node: 'java'
+       |     |  |  \-[IDENT] Node: 'classes'
+       |     |  \-[IDENT] Node: 'Suppliers'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &lt;&lt; begin [level=1, statement=select]
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : web_prak.java.classes.Suppliers (generatedAlias0) -&gt; suppliers0_
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -&gt; suppliers0_.supplier_id
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} suppliers0_.supplier_id ) ( FromClause{level=1} suppliers suppliers0_ ) )
+11:49:37.822 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Suppliers): [suppliers]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(web_prak.java.classes.Suppliers)
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [suppliers suppliers0_]
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &gt;&gt; end [level=1, statement=select]
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (suppliers)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'suppliers0_.supplier_id as supplier1_5_' {alias=generatedAlias0, className=web_prak.java.classes.Suppliers, tableAlias=suppliers0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[suppliers0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'suppliers suppliers0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=suppliers,tableAlias=suppliers0_,origin=null,columns={,className=web_prak.java.classes.Suppliers}}
+
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0 from web_prak.java.classes.Suppliers as generatedAlias0
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_
+11:49:37.823 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.823 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_
+Hibernate: select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_
+11:49:37.824 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
+11:49:37.824 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[web_prak.java.classes.Suppliers#278]
+11:49:37.824 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 1
+11:49:37.824 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[web_prak.java.classes.Suppliers#279]
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#278]
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#278]
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#279]
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Арбат, д1
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 765-17-17
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = pbrew2@booking.com
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.824 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#279]
+11:49:37.824 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.825 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.825 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.825 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.825 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.825 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.826 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.826 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.826 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.826 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=278, email=wokker0@infoseek.co.jp}
+11:49:37.826 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.837 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.837 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.837 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.838 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.838 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.838 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.838 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.838 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.838 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.838 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.838 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.838 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Арбат, д1, contact=+7 (926) 765-17-17, supplier_name=Казакова Алиса, supplier_id=279, email=pbrew2@booking.com}
+11:49:37.838 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.857 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.857 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.857 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.858 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.858 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.858 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.858 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.859 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 280
+11:49:37.859 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.859 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.859 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.859 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.859 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.859 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.859 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.859 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=280, email=wokker0@infoseek.co.jp}
+11:49:37.874 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.874 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.874 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.875 [Test worker] DEBUG org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#280]
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#280]
+11:49:37.876 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#280
+11:49:37.876 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.876 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.876 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.876 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.876 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.876 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.876 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.876 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=280, email=wokker0@infoseek.co.jp}
+11:49:37.876 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.891 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.891 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.891 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.891 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.891 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.892 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.892 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.892 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 281
+11:49:37.892 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.892 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.892 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.892 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.892 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.892 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.892 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.892 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=281, email=wokker0@infoseek.co.jp}
+11:49:37.907 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.907 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.907 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.907 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.907 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.907 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.908 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 282
+11:49:37.908 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.908 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.908 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.908 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.908 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.908 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.908 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.908 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Арбат, д1, contact=+7 (926) 765-17-17, supplier_name=Казакова Алиса, supplier_id=282, email=pbrew2@booking.com}
+11:49:37.924 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.924 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: From web_prak.java.classes.Suppliers Where supplier_name =: param
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'From'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'web_prak'
+    |           |  |  \-[IDENT] Node: 'java'
+    |           |  \-[IDENT] Node: 'classes'
+    |           \-[IDENT] Node: 'Suppliers'
+    \-[WHERE] Node: 'Where'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'supplier_name'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param'
+
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &lt;&lt; begin [level=1, statement=select]
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : web_prak.java.classes.Suppliers (&lt;no alias&gt;) -&gt; suppliers0_
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -&gt; {synthetic-alias}
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : supplier_name -&gt; org.hibernate.type.StringType@2b170932
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.supplier_name -&gt; suppliers0_.supplier_name
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+11:49:37.925 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} suppliers suppliers0_ ) ( Where ( = ( suppliers0_.supplier_name {synthetic-alias} supplier_name ) ? ) ) )
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Suppliers): [suppliers]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(web_prak.java.classes.Suppliers)
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(web_prak.java.classes.Suppliers)
+          | path: {synthetic-alias}.supplier_name
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(web_prak.java.classes.Suppliers)
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: supplier_name
+          \-ParameterNode
+
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [suppliers suppliers0_]
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &gt;&gt; end [level=1, statement=select]
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (suppliers)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'suppliers0_.supplier_id as supplier1_5_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=suppliers,tableAlias=suppliers0_,origin=null,columns={,className=web_prak.java.classes.Suppliers}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_'
+    +-[FROM] FromClause: 'From' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[suppliers0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'suppliers suppliers0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=suppliers,tableAlias=suppliers0_,origin=null,columns={,className=web_prak.java.classes.Suppliers}}
+    \-[WHERE] SqlNode: 'Where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'suppliers0_.supplier_name' {propertyName=supplier_name,dereferenceType=PRIMITIVE,getPropertyPath=supplier_name,path={synthetic-alias}.supplier_name,tableAlias=suppliers0_,className=web_prak.java.classes.Suppliers,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'supplier_name' {originalText=supplier_name}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param, expectedType=org.hibernate.type.StringType@2b170932}
+
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: From web_prak.java.classes.Suppliers Where supplier_name =: param
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_ where suppliers0_.supplier_name=?
+11:49:37.926 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+11:49:37.926 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_ where suppliers0_.supplier_name=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_, suppliers0_.address as address2_5_, suppliers0_.contact as contact3_5_, suppliers0_.email as email4_5_, suppliers0_.supplier_name as supplier5_5_ from suppliers suppliers0_ where suppliers0_.supplier_name=?
+11:49:37.927 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
+11:49:37.927 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[web_prak.java.classes.Suppliers#281]
+11:49:37.927 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 1
+11:49:37.927 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[web_prak.java.classes.Suppliers#282]
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#281]
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#281]
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#282]
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Арбат, д1
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 765-17-17
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = pbrew2@booking.com
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.927 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#282]
+11:49:37.927 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.928 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.928 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.928 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.928 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.928 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.928 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.928 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.928 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.928 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=281, email=wokker0@infoseek.co.jp}
+11:49:37.928 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.941 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.941 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.941 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.941 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.941 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.941 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.941 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.941 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.941 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.941 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.941 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.941 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Арбат, д1, contact=+7 (926) 765-17-17, supplier_name=Казакова Алиса, supplier_id=282, email=pbrew2@booking.com}
+11:49:37.941 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:37.958 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.958 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.958 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.959 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.959 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.959 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+11:49:37.959 [Test worker] DEBUG org.hibernate.SQL - insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+Hibernate: insert into suppliers (address, contact, email, supplier_name) values (?, ?, ?, ?)
+11:49:37.959 [Test worker] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 283
+11:49:37.959 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+11:49:37.959 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.959 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.959 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.960 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+11:49:37.960 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.960 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.960 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=улица Пятницкая, д27, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=283, email=wokker0@infoseek.co.jp}
+11:49:37.974 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.975 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.975 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.975 [Test worker] DEBUG org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#283]
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = улица Пятницкая, д27
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#283]
+11:49:37.976 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#283
+11:49:37.976 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.976 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.976 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.976 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.976 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+11:49:37.976 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.976 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.976 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=Достоевского д17, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=283, email=wokker0@infoseek.co.jp}
+11:49:37.976 [Test worker] DEBUG org.hibernate.SQL - update suppliers set address=?, contact=?, email=?, supplier_name=? where supplier_id=?
+Hibernate: update suppliers set address=?, contact=?, email=?, supplier_name=? where supplier_id=?
+11:49:37.992 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.992 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.992 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+11:49:37.992 [Test worker] DEBUG org.hibernate.SQL - select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+Hibernate: select suppliers0_.supplier_id as supplier1_5_0_, suppliers0_.address as address2_5_0_, suppliers0_.contact as contact3_5_0_, suppliers0_.email as email4_5_0_, suppliers0_.supplier_name as supplier5_5_0_ from suppliers suppliers0_ where suppliers0_.supplier_id=?
+11:49:37.992 [Test worker] DEBUG org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [web_prak.java.classes.Suppliers#283]
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = Достоевского д17
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `contact` : value = +7 (926) 059-17-93
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`contact`)  - enhanced for lazy-loading? - false
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = wokker0@infoseek.co.jp
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `supplier_name` : value = Казакова Алиса
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`supplier_name`)  - enhanced for lazy-loading? - false
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [web_prak.java.classes.Suppliers#283]
+11:49:37.993 [Test worker] DEBUG org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : web_prak.java.classes.Suppliers#283
+11:49:37.993 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+11:49:37.993 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+11:49:37.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+11:49:37.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+11:49:37.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+11:49:37.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+11:49:37.993 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+11:49:37.993 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - web_prak.java.classes.Suppliers{address=Достоевского д17, contact=+7 (926) 059-17-93, supplier_name=Казакова Алиса, supplier_id=283, email=wokker0@infoseek.co.jp}
+11:49:37.993 [Test worker] DEBUG org.hibernate.SQL - delete from suppliers where supplier_id=?
+Hibernate: delete from suppliers where supplier_id=?
+11:49:38.008 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:38.008 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+11:49:38.008 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 4 апр. 2022 г., 11:49:44</p>
+</div>
+</div>
+</body>
+</html>

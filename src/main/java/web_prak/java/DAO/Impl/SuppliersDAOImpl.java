@@ -53,9 +53,9 @@ public class SuppliersDAOImpl implements SuppliersDAO {
                 Suppliers.class).setParameter("param", supplier_name);
         List<Suppliers> suppliers = query.getResultList();
         session.close();
-        if (suppliers.size() == 0) {
-            return null;
-        }
+//        if (suppliers.size() == 0) {
+//            return null;
+//        }
         return suppliers;
     }
 

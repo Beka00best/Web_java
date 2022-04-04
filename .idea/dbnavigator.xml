@@ -29,8 +29,17 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="64aa2b12-5556-4c50-8611-df95f6143a30">
       <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select *From clients;
+select *From clients;
+select * from clients;
 alter table register_place alter column place_id type SERIAL;
+delete from supplies_list;
+delete from supplies;
 delete from suppliers;
+delete from register_place;
+delete from clients;
+delete from deliveries_list;
+delete from deliveries;
+delete from products;
 commit;]]></console>
     </connection>
   </component>
