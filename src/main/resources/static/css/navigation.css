@@ -1,0 +1,31 @@
+ul.navigation {
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation li {
+    display: inline-block;
+    text-align: center;
+}
+
+ul.navigation a {
+    display: inline-block;
+    width: 115px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px #333;
+    text-decoration: none;
+    color: #333333;
+    text-align: center;
+}
+
+ul.navigation a:hover {
+    background-color: #333333;
+    color: #f4f4f4;
+}
+
+.active {
+    background-color: #4CAF50;
+}

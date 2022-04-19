@@ -40,11 +40,16 @@ delete from clients;
 delete from deliveries_list;
 delete from deliveries;
 delete from products;
-commit;]]></console>
+commit;
+
+INSERT INTO clients (client_name, contact, address, email) VALUES
+('Иван Иванов', '+7 (976) 130-93-80', 'Ярославское шоссе д26', 'cromaint0@go.com')]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="64aa2b12-5556-4c50-8611-df95f6143a30" object-ref="consoles/Connection" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="64aa2b12-5556-4c50-8611-df95f6143a30" />
