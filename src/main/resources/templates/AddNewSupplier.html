@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить нового доставщика</title>
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/style.css}">
+    <link rel="stylesheet" href="../static/css/navigation.css" th:href="@{/navigation.css}">
+    <link rel="stylesheet" type="text/css" href="../static/tables.css" th:href="@{/tables.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <ul class="navigation">
+            <li><a href="/" class="btn_main" role="button" id="Home">Домой</a></li>
+            <li><a href="/products" class="btn_main" role="button" id="mainProduct">Товары</a></li>
+            <li><a href="/clients" class="btn_main" role="button" id="mainClient">Клиенты</a></li>
+            <li><a href="/suppliers" class="btn_main" role="button" id="mainSupplier">Поставщики</a></li>
+            <li><a href="/delivery" class="btn_main" role="button" id="mainDelivery">Доставка</a></li>
+            <li><a href="/supplies" class="btn_main" role="button" id="mainSupplies">Поставка</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<div class="container">
+    <form action="/added-supplier" method="post">
+        <div class="field-form">
+            <br>
+            <label class="all-text">Имя поставщика</label>
+            <br>
+            <input type="text" class="form-control" id="validationDefaultNameCustomer" name="supplier_name">
+        </div>
+        <div class="field-form">
+            <br>
+            <label class="all-text">Контакты</label>
+            <br>
+            <input type="text" class="form-control" id="validationDefaultNumberPhone" name="contact" required>
+        </div>
+        <div class="field-form">
+            <br>
+            <label class="all-text">Адрес</label>
+            <br>
+            <input type="text" class="form-control" id="validationDefaultAddress" name="address" required>
+        </div>
+        <div class="field-form">
+            <br>
+            <label class="all-text">Электронная почта</label>
+            <br>
+            <input type="text" class="form-control" id="validationDefaultEmail" name="email" required>
+        </div>
+
+        <br>
+        <div>
+            <button type="submit" id="submitAddSupp">Добавить</button>
+        </div>
+    </form>
+</div>
+
+<!--<form>-->
+<!--    <fieldset>-->
+<!--        <legend>Контактная информация</legend>-->
+<!--        <p><label for="name">Имя <em>*</em></label><input type="text" id="name"></p>-->
+<!--        <p><label for="email">E-mail</label><input type="email" id="email"></p>-->
+<!--    </fieldset>-->
+<!--    <p><input type="submit" value="Отправить"></p>-->
+<!--</form>-->
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <div class="social">
+                    Мой вк: <a href="https://vk.com/" class="social-link">
+                    <img src="../static/img/vk.png" alt="vk">
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

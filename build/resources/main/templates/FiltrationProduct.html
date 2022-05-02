@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильтры для продуктов</title>
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/style.css}">
+    <link rel="stylesheet" href="../static/css/navigation.css" th:href="@{/navigation.css}">
+    <link rel="stylesheet" type="text/css" href="../static/tables.css" th:href="@{/tables.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <ul class="navigation">
+            <li><a href="/" class="btn_main" role="button" id="Home">Домой</a></li>
+            <li><a href="/products" class="btn_main" role="button" id="mainProduct">Товары</a></li>
+            <li><a href="/clients" class="btn_main" role="button" id="mainClient">Клиенты</a></li>
+            <li><a href="/suppliers" class="btn_main" role="button" id="mainSupplier">Поставщики</a></li>
+            <li><a href="/delivery" class="btn_main" role="button" id="mainDelivery">Доставка</a></li>
+            <li><a href="/supplies" class="btn_main" role="button" id="mainSupplies">Поставка</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<div class="container">
+    <form action="/filtered" method="post">
+        <div class="field-form">
+            <br>
+            <label class="all-text">Тип</label>
+            <br>
+            <input type="text" class="form-control" id="validationDefaultType" name="type">
+        </div>
+        <div class="field-form">
+            <br>
+            <label class="all-text">Срок годности от</label>
+            <br>
+            <input type="date" class="form-control" id="validationDefaultDateProdFrom" name="date_after">
+        </div>
+        <div class="field-form">
+            <br>
+            <label class="all-text">Срок годности до</label>
+            <br>
+            <input type="date" class="form-control" id="validationDefaultDateProdTo" name="date_before">
+        </div>
+        <br>
+        <div>
+            <button type="submit">Фильтровать</button>
+        </div>
+    </form>
+</div>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <div class="social">
+                    Мой вк: <a href="https://vk.com/" class="social-link">
+                    <img src="../static/img/vk.png" alt="vk">
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

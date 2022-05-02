@@ -12,4 +12,5 @@ public interface Register_placeDAO {
     List<Register_place> getRegPlaceByFree(String free);
     List<Register_place> getRegPlaceByStorageLoc(String storage_location);
     List<Register_place> getAllRegPlace();
+    boolean getFreeById(long place_id);
 }

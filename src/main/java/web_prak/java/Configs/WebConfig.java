@@ -2,15 +2,28 @@ package web_prak.java.Configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
+@EnableWebMvc
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/res/**").addResourceLocations("/res/**");
+        registry.addResourceHandler("/css/**").addResourceLocations("classpath:/res/css/");
+        registry.addResourceHandler("/fonts/**").addResourceLocations("classpath:/fonts/");
+        registry.addResourceHandler("/img/**").addResourceLocations("classpath:/img/");
+        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/js/");
+    }
 
     @Bean
     public ClassLoaderTemplateResolver templateResolver() {

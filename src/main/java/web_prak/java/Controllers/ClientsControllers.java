@@ -64,7 +64,7 @@ public class ClientsControllers {
         return "redirect:/clients";
     }
 
-    @GetMapping("delete-client")
+    @GetMapping("/delete-client")
     public String deleteClient(@RequestParam(name = "client_id") long client_id, Model model) {
         Clients uselessClient = clientsServices.getClientById(client_id);
         clientsServices.deleteClient(uselessClient);

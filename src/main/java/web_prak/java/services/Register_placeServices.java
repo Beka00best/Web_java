@@ -36,4 +36,7 @@ public class Register_placeServices {
     public List<Register_place> getAllRegPlace() {
         return register_placeDAO.getAllRegPlace();
     }
+    public boolean getFreePlace(long place_id) {
+        return register_placeDAO.getFreeById(place_id);
+    }
 }

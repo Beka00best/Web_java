@@ -85,4 +85,14 @@ public class Register_placeDAOImpl implements Register_placeDAO {
         session.close();
         return register_place;
     }
+
+    @Override
+    public boolean getFreeById(long place_id) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query<Register_place> query = session.createQuery("FROM Register_place " +
+                "WHERE  free = 'да' and place_id = :param", Register_place.class).setParameter("param", place_id);
+        List<Register_place> register_place = query.getResultList();
+        session.close();
+        return register_place.size() != 0;
+    }
 }
