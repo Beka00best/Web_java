@@ -39,7 +39,7 @@ public class ProductsController {
                              @RequestParam(name = "measure") String measure,
                              @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam(name = "expiration_date_from", required = false) java.util.Date expiration_date_from,
                              @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam(name = "expiration_date_to", required = false) java.util.Date expiration_date_to,
-                             @RequestParam(name = "product_id", defaultValue = "-1") long place_id,
+                             @RequestParam(name = "place_id", defaultValue = "-1") long place_id,
                              Model model) {
         Products new_product;
         Register_place register_place;

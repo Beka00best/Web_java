@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продукты</title>
+    <title>Товары</title>
     <link rel="stylesheet" href="../static/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{/style.css}">
@@ -45,7 +45,7 @@
             <tr th:if="${products.isEmpty()}">
                 <td colspan="16">Нет продуктов</td>
             </tr>
-            <tr th:each="product : ${products}">
+            <tr th:each="product : ${products}" id="infoProduct">
                 <td><a class="text-link" th:href="'/edit-products?product_id=' + ${product.getProduct_id()}"><span th:text="${product.getProduct_name()}"></span></a></td>
                 <td><span th:text="${product.getType()}"></span></td>
                 <td><span th:text="${product.getQuantity()} + ' ' + ${product.getMeasure()}"></span></td>

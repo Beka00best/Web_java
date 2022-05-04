@@ -28,9 +28,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="64aa2b12-5556-4c50-8611-df95f6143a30">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select *From register_place;
-select *From deliveries;
-select * from deliveries_list;
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select *From suppliers;
+select * from products;
 delete from supplies_list;
 delete from supplies;
 delete from suppliers;
@@ -40,34 +39,21 @@ delete from deliveries_list;
 delete from deliveries;
 delete from products;
 commit;
-
+select *From suppliers;
+delete from products where product_id=473;
 select * FROM register_place WHERE free = 'да' and place_id = 1;
 update register_place set free = 'да' where place_id = 9
-
-INSERT INTO clients (client_name, contact, address, email) VALUES
-('Иван Иванов', '+7 (976) 130-93-80', 'Ярославское шоссе д26', 'cromaint0@go.com')
-
-INSERT INTO register_place (place_id, storage_location, free) VALUES
-(1, '02 10 03', 'нет'),
-(2, '03 03 04', 'нет'),
-(3, '02 05 06', 'нет'),
-(4, '03 05 07', 'нет'),
-(5, '05 04 03', 'нет'),
-(6, '03 07 08', 'нет'),
-(7, '03 04 09', 'нет'),
-(8, '01 01 05', 'нет'),
-(9, '01 01 01', 'да')
 
 
 INSERT INTO products (product_id, product_name, type, quantity, measure, expiration_date_from, expiration_date_to, place_id) VALUES
 (1, 'Asus Rog Strix', 'Ноутбуки', 5, 'штук', '2021-08-01 00:00:00', '2022-08-01 00:00:00', 1),
 (2, 'Xiaomi redmi note 8', 'Смартфоны', 10, 'штук', '2020-11-23 15:00:00', '2022-12-01 5:00:00', 2),
-(3, 'Samsung t-867', 'Компьютеры', 20, 'штук', '2020-12-29 20:30:00', '2022-07-05 16:30:00', 3), 
+(3, 'Samsung t-867', 'Компьютеры', 20, 'штук', '2020-12-29 20:30:00', '2022-07-05 16:30:00', 3),
 (4, 'Стиральная машинка LG', 'Бытовая техника', 10, 'штук', '2021-01-22 10:30:00', '2022-06-28 12:32:00', 4),
 (5, 'Передний бампер', 'Детали', 6, 'штук', '2020-09-23 18:00:00', '2022-08-12 15:00:00', 5),
 (6, 'Комод', 'Мебель', 7, 'штук', '2021-02-10 19:30:00', '2022-05-10 19:30:00', 6),
 (7, 'Пылесос', 'Бытовая техника', 15, 'штук', '2021-01-19 17:50:00', '2022-11-29 17:50:00', 7),
-(8, 'Картошка', 'Овощи', 100, 'штук','2021-01-22 10:30:00', '2022-12-22 11:30:00', 8) 
+(8, 'Картошка', 'Овощи', 100, 'штук','2021-01-22 10:30:00', '2022-12-22 11:30:00', 8)
 
 INSERT INTO clients (client_id, client_name, contact, address, email) VALUES
 (1, 'Иван Иванов', '+7 (976) 130-93-80', 'Ярославское шоссе д26', 'cromaint0@go.com'),
@@ -98,7 +84,6 @@ INSERT INTO supplies (supply_id, supplier_id, data_supply, status, store_period)
 (5, 4, '2022-03-20 17:10:00', 'в процессе', 90),
 (6, 5, '2022-04-16 11:00:00', 'в процессе', 80),
 (4, 6, '2022-05-25 12:20:00', 'в процессе', 120)
-
 
 INSERT INTO deliveries (delivery_id, client_id, date_issue, status) VALUES
 (1, 1, '2022-02-05 10:40:00', 'завершен'),

@@ -63,7 +63,7 @@
         <div>
             <button type="submit">Изменить</button>
             <ul class="navigation">
-                <li><a role="button" th:href="'/delete-supplier?supplier_id=' + ${supplier.getSupplier_id()}">Удалить</a></li>
+                <li><a id="deleteBtn" role="button" th:href="'/delete-supplier?supplier_id=' + ${supplier.getSupplier_id()}">Удалить</a></li>
             </ul>
         </div>
     </form>

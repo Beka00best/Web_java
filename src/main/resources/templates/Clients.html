@@ -43,7 +43,7 @@
             <tr th:if="${clients.isEmpty()}">
                 <td colspan="16">Нет клиентов</td>
             </tr>
-            <tr th:each="client : ${clients}">
+            <tr th:each="client : ${clients}" id="infoClient">
                 <td><a class="text-link" th:href="'/edit-client?client_id=' + ${client.getClient_id()}"><span th:text="${client.getClient_name()}"></span></a></td>
                 <td><span th:text="${client.getEmail()}"></span></td>
                 <td><span th:text="${client.getContact()}"></span></td>
@@ -54,7 +54,7 @@
     <br>
     <div class="content-btn">
         <ul class="navigation">
-            <li><a href="/add-new-client" role="button">Добавить</a></li>
+            <li><a href="/add-new-client" role="button" id="addClient">Добавить</a></li>
         </ul>
     </div>
 

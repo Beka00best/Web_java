@@ -68,7 +68,7 @@
         <div>
             <button type="submit" th:id="submitEdit">Изменить</button>
             <ul class="navigation">
-                <li><a role="button" th:href="'/delete-delivery?deliveries_list_id=' + ${delivery.getDeliveries_list_id()}">Удалить</a></li>
+                <li><a id="deleteBtn" role="button" th:href="'/delete-delivery?deliveries_list_id=' + ${delivery.getDeliveries_list_id()}">Удалить</a></li>
             </ul>
         </div>
     </form>
